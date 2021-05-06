@@ -1,13 +1,14 @@
 public class ShapeFactory {
-	
-    //use getShape method to get object of type shape 
-    public Shape getShape(String shapeType){
-       if(shapeType == null){
-          return null;
-       }		
-       if(shapeType.equalsIgnoreCase("CIRCLE")){
-          return new Circle();
-       }       
-       return null;
+
+    public Shape getInstance(String shapeType) {
+        if (shapeType == null) {
+            return null;
+        }
+
+        if (shapeType == "Square") {
+            Square square = new Square();
+            return square;
+        }
+        return null;
     }
 }
